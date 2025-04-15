@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LightPad - Lightweight Application Launcher for Linux</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="assets/logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-[#1E1E1E]">
+    <!-- Floating Navigation Bar -->
+    <nav class="fixed top-4 left-4 right-4 z-50 backdrop-blur-md bg-white/50 shadow-lg rounded-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <img src="assets/logo.svg" alt="LightPad Logo" class="h-12 w-auto mr-2">
+                    <span class="text-black font-bold text-2xl">LightPad</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#download" class="text-black hover:text-[#6B8CFF] transition-colors">Download</a>
+                    <a href="#features" class="text-black hover:text-[#6B8CFF] transition-colors">Features</a>
+                    <a href="#get-started" class="text-black hover:text-[#6B8CFF] transition-colors">Get Started</a>
+                    <a href="#team" class="text-black hover:text-[#6B8CFF] transition-colors">Team</a>
+                    <div id="donate-button-container" class="flex items-center justify-center">
+                        <div id="donate-button"></div>
+                        <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                        <script>
+                            PayPal.Donation.Button({
+                                env:'production',
+                                hosted_button_id:'3MUTW978NRQUC',
+                                image: {
+                                    src:'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
+                                    alt:'Donate with PayPal button',
+                                    title:'PayPal - The safer, easier way to pay online!',
+                                }
+                            }).render('#donate-button');
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-40 pb-20 px-4 min-h-screen flex items-center">
+        <div class="hero-background">
+            <div class="app-icons">
+                <!-- App Icons will be added here -->
+            </div>
+        </div>
+        <div class="container mx-auto text-center relative z-10">
+            <h1 class="text-7xl font-bold text-white mb-6">LightPad</h1>
+            <p class="text-2xl text-white/90 mb-12 max-w-2xl mx-auto">A lightweight, simple and powerful application launcher for Linux, compatible with both X11 and Wayland.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#download" class="bg-white text-[#2C3E50] px-8 py-4 rounded-lg hover:bg-white/90 transition-colors font-semibold flex items-center space-x-2">
+                    <i class="fas fa-download animate-bounce"></i>
+                    <span>Download Now</span>
+                </a>
+                <a href="https://github.com/libredeb/lightpad" target="_blank" class="bg-[#2C3E50]/80 text-white px-8 py-4 rounded-lg hover:bg-[#2C3E50] transition-colors font-semibold flex items-center space-x-2">
+                    <i class="fab fa-github animate-pulse"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Features</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card p-6 rounded-lg">
+                    <div class="flex">
+                        <img src="assets/icons/lightweight.png" alt="Lightweight Icon" class="feature-icon mr-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Lightweight</h3>
+                            <p>Built with Vala and GTK+ 3.0 for optimal performance and minimal resource usage.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card p-6 rounded-lg">
+                    <div class="flex">
+                        <img src="assets/icons/wayland.png" alt="Wayland Icon" class="feature-icon mr-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Wayland Compatible</h3>
+                            <p>Works seamlessly on both X11 and Wayland display servers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card p-6 rounded-lg">
+                    <div class="flex">
+                        <img src="assets/icons/customizable.png" alt="Customizable Icon" class="feature-icon mr-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Customizable</h3>
+                            <p>Personalize your experience with themes and custom backgrounds.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section id="get-started" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Get Started</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-6 rounded-lg bg-[#2D3436] border border-[#3A3F4B]">
+                    <h3 class="text-2xl font-semibold mb-4 text-[#DFE6E9]">Install from Package</h3>
+                    <p class="text-[#B2BEC3] mb-4">Download the pre-built package for your distribution:</p>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-[#3A3F4B] rounded-lg">
+                            <h4 class="font-semibold text-[#DFE6E9] mb-2">Debian/Ubuntu</h4>
+                            <div class="flex items-center space-x-2">
+                                <code class="flex-1 p-2 bg-[#2D3436] rounded text-[#B2BEC3]">sudo dpkg -i lightpad_*.deb</code>
+                                <button class="copy-btn p-2 text-[#B2BEC3] hover:text-[#DFE6E9] transition-colors" data-copy="sudo dpkg -i lightpad_*.deb">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-[#3A3F4B] rounded-lg">
+                            <h4 class="font-semibold text-[#DFE6E9] mb-2">Fedora/RHEL</h4>
+                            <div class="flex items-center space-x-2">
+                                <code class="flex-1 p-2 bg-[#2D3436] rounded text-[#B2BEC3]">sudo rpm -i lightpad_*.rpm</code>
+                                <button class="copy-btn p-2 text-[#B2BEC3] hover:text-[#DFE6E9] transition-colors" data-copy="sudo rpm -i lightpad_*.rpm">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 rounded-lg bg-[#2D3436] border border-[#3A3F4B]">
+                    <h3 class="text-2xl font-semibold mb-4 text-[#DFE6E9]">Build from Source</h3>
+                    <p class="text-[#B2BEC3] mb-4">For the adventurous souls who want to build from source. The following commands are examples and may vary depending on your distribution. For detailed instructions, please refer to our official documentation:</p>
+                    <div class="flex justify-center mb-6">
+                        <a href="https://github.com/libredeb/lightpad/blob/main/README.md" target="_blank" class="bg-[#2C3E50] text-white px-6 py-3 rounded-lg hover:bg-[#1A252F] transition-colors flex items-center space-x-2 shadow-lg hover:shadow-xl">
+                            <i class="fas fa-book"></i>
+                            <span>View Official Documentation</span>
+                        </a>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-[#3A3F4B] rounded-lg">
+                            <h4 class="font-semibold text-[#DFE6E9] mb-2">Dependencies</h4>
+                            <div class="flex items-center space-x-2">
+                                <code class="flex-1 p-2 bg-[#2D3436] rounded text-[#B2BEC3]">sudo apt install meson valac libgtk-3-dev libgee-0.8-dev</code>
+                                <button class="copy-btn p-2 text-[#B2BEC3] hover:text-[#DFE6E9] transition-colors" data-copy="sudo apt install meson valac libgtk-3-dev libgee-0.8-dev">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-[#3A3F4B] rounded-lg">
+                            <h4 class="font-semibold text-[#DFE6E9] mb-2">Build Steps</h4>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <code class="flex-1 p-2 bg-[#2D3436] rounded text-[#B2BEC3]">meson build --prefix=/usr</code>
+                                    <button class="copy-btn p-2 text-[#B2BEC3] hover:text-[#DFE6E9] transition-colors" data-copy="meson build --prefix=/usr">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <code class="flex-1 p-2 bg-[#2D3436] rounded text-[#B2BEC3]">ninja -C build</code>
+                                    <button class="copy-btn p-2 text-[#B2BEC3] hover:text-[#DFE6E9] transition-colors" data-copy="ninja -C build">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <code class="flex-1 p-2 bg-[#2D3436] rounded text-[#B2BEC3]">sudo ninja -C build install</code>
+                                    <button class="copy-btn p-2 text-[#B2BEC3] hover:text-[#DFE6E9] transition-colors" data-copy="sudo ninja -C build install">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-[#3A3F4B] rounded-lg">
+                            <h4 class="font-semibold text-[#DFE6E9] mb-2">Run It!</h4>
+                            <div class="flex items-center space-x-2">
+                                <code class="flex-1 p-2 bg-[#2D3436] rounded text-[#B2BEC3]">lightpad</code>
+                                <button class="copy-btn p-2 text-[#B2BEC3] hover:text-[#DFE6E9] transition-colors" data-copy="lightpad">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-[#1A1A1A]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-[#DFE6E9] mb-12">Team</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <a href="https://github.com/juanlozano" target="_blank" class="p-8 rounded-lg bg-[#2A2A2A] hover:bg-[#3A1A1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <div class="flex flex-col items-center text-center">
+                        <img src="assets/team/juan.png" alt="Juan Lozano" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-[#FF6B6B]">
+                        <h3 class="text-xl font-semibold text-[#DFE6E9] mb-2">Juan Lozano</h3>
+                        <p class="text-[#B2BEC3]">Project Administrator</p>
+                    </div>
+                </a>
+                <a href="https://twisteros.com" target="_blank" class="p-8 rounded-lg bg-[#2A2A2A] hover:bg-[#2A1A3A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <div class="flex flex-col items-center text-center">
+                        <img src="assets/team/twister.png" alt="Twister OS" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-[#9B59B6]">
+                        <h3 class="text-xl font-semibold text-[#DFE6E9] mb-2">Twister OS</h3>
+                        <p class="text-[#B2BEC3]">Contributor</p>
+                    </div>
+                </a>
+                <a href="https://ubuntubudgie.org" target="_blank" class="p-8 rounded-lg bg-[#2A2A2A] hover:bg-[#1A2A3A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-[#34495E]">
+                            <img src="assets/team/ubudgie.jpg" alt="Ubuntu Budgie" class="w-full h-full object-cover scale-110">
+                        </div>
+                        <h3 class="text-xl font-semibold text-[#DFE6E9] mb-2">Ubuntu Budgie</h3>
+                        <p class="text-[#B2BEC3]">Contributor</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="py-20 bg-[#1A1A1A]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-[#DFE6E9] mb-12">Download</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-[#2A2A2A] p-8 rounded-lg shadow-lg border border-[#333333]">
+                    <h3 class="text-2xl font-semibold text-[#DFE6E9] mb-4">Available for Linux</h3>
+                    <p class="text-[#B2BEC3] mb-6">LightPad is available for various Linux distributions through different installation methods.</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <a href="https://github.com/libredeb/lightpad/releases" class="bg-[#4A90E2] hover:bg-[#357ABD] text-white px-6 py-3 rounded-lg transition-colors text-center flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            <i class="fas fa-download"></i>
+                            <span>Download Latest Release</span>
+                        </a>
+                        <a href="https://github.com/libredeb/lightpad" class="bg-[#FF6B6B] hover:bg-[#E55A5A] text-white px-6 py-3 rounded-lg transition-colors text-center flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            <i class="fab fa-github"></i>
+                            <span>View on GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Contributors Section -->
+    <section class="py-20 bg-gradient-to-b from-[#1A1A1A] to-[#2C3E50]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-white mb-4">Our Top Donors</h2>
+            <p class="text-xl text-white/80 text-center mb-12 max-w-2xl mx-auto">These generous supporters have helped fuel LightPad's development through their contributions. Every donation makes a difference!</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Gold Donor -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-yellow-500 to-yellow-300 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                    <div class="relative bg-[#2A2A2A] p-8 rounded-lg border border-yellow-500/20">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="relative mb-6">
+                                <img src="assets/user.png" alt="G. Sinclair" class="w-24 h-24 rounded-full object-cover border-4 border-yellow-500">
+                                <div class="absolute -top-2 -right-2 bg-yellow-500 text-white rounded-full p-2">
+                                    <i class="fas fa-crown"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-2">G. Sinclair</h3>
+                            <p class="text-yellow-400 mb-2">Project Contributor</p>
+                            <p class="text-white/70 text-sm">#1 Donor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-white/80 mb-6">Want to support our project with a donation?</p>
+                <a href="https://www.paypal.com/donate/?hosted_button_id=3MUTW978NRQUC" target="_blank" class="inline-flex items-center space-x-2 bg-[#4A90E2] hover:bg-[#357ABD] text-white px-6 py-3 rounded-lg transition-colors">
+                    <i class="fas fa-heart"></i>
+                    <span>Make a Donation</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-bg text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-[#B2BEC3]">&copy; 2025 LightPad. All rights reserved.</p>
+            <p class="text-[#B2BEC3] mt-2">Licensed under GPL-3.0 | Made with <i class="fas fa-heart text-[#FF6B6B]"></i> for the Linux community</p>
+            <p class="text-[#B2BEC3] mt-2 text-sm">LightPad is not affiliated with or endorsed by any Linux distribution. All trademarks are the property of their respective owners.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

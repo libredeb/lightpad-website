@@ -1,0 +1,381 @@
+/* Custom styles for LightPad website */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom color palette */
+:root {
+    --primary: #7ED957;
+    --primary-dark: #5CB85C;
+    --secondary: #2C3E50;
+    --secondary-dark: #34495E;
+    --background: #1E1E1E;
+    --text-color: #E0E0E0;
+    --card-bg: #2D2D2D;
+}
+
+/* Navigation bar animation */
+nav {
+    transition: all 0.3s ease;
+    backdrop-filter: blur(12px);
+}
+
+/* Navigation text glow effect */
+nav .text-2xl {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    transition: text-shadow 0.3s ease;
+    color: black;
+    font-weight: 700;
+}
+
+nav .text-2xl:hover {
+    text-shadow: 0 0 12px rgba(255, 255, 255, 1);
+}
+
+nav a {
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+    transition: text-shadow 0.3s ease;
+    color: black !important;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+/* Hero Section Background */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #6B8CFF 0%, #34495E 100%);
+    z-index: -1;
+    overflow: hidden;
+}
+
+.app-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+
+.app-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    animation: float 15s infinite linear;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-icon:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-30px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+/* Feature cards hover effect */
+.grid > div {
+    background-color: var(--card-bg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Button hover effects */
+a[class*="bg-"] {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+a[class*="bg-"]:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Download button hover */
+.bg-white:hover {
+    background-color: #f0f0f0 !important;
+    color: #1a1a1a !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* GitHub button hover */
+.bg-\[\#2C3E50\]\/80:hover {
+    background-color: #1A252F !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Download section buttons hover */
+.bg-\[\#BBD8A3\]:hover {
+    background-color: #A8C48F !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.bg-\[\#2C3E50\]:hover {
+    background-color: #1A252F !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+    .hidden.md\:flex {
+        display: none;
+    }
+    
+    /* Add mobile menu button here if needed */
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
+/* Section animations */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Code block styling */
+code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+    background-color: #1A1A1A;
+    color: #E0E0E0;
+}
+
+/* Footer links */
+footer {
+    background-color: #2C3E50 !important;
+    transition: none !important;
+}
+
+footer:hover {
+    background-color: #2C3E50 !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+footer a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary-dark);
+}
+
+/* GitHub button icon animation */
+.fa-github {
+    transition: transform 0.3s ease;
+}
+
+a:hover .fa-github {
+    transform: rotate(360deg);
+}
+
+/* Navigation links hover effect */
+nav a {
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(23, 32, 42, 0.98);
+    color: #1E90FF !important;
+    transform: translateY(-2px);
+    text-shadow: 0 0 20px rgba(30, 144, 255, 0.9);
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.3);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #1E90FF;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 80%;
+}
+
+/* Features Section */
+#features {
+    background-color: #2D3436;
+    color: #E0E0E0;
+}
+
+#features h2 {
+    color: #B2BEC3;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.feature-card {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.feature-card h3 {
+    color: #DFE6E9;
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    color: #B2BEC3;
+    position: relative;
+    z-index: 1;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* First feature card - Lightweight */
+.feature-card:nth-child(1) {
+    background: linear-gradient(135deg, #2D3436 0%, #3A3F4B 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Second feature card - Wayland Compatible */
+.feature-card:nth-child(2) {
+    background: linear-gradient(135deg, #2D3436 0%, #3A3F4B 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Third feature card - Customizable */
+.feature-card:nth-child(3) {
+    background: linear-gradient(135deg, #2D3436 0%, #3A3F4B 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Feature Icons */
+.feature-icon {
+    width: 128px;
+    height: 128px;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    opacity: 0.9;
+    flex-shrink: 0;
+}
+
+.feature-card:nth-child(1) .feature-icon {
+    color: #7ED957;
+}
+
+.feature-card:nth-child(2) .feature-icon {
+    color: #45B7D1;
+}
+
+.feature-card:nth-child(3) .feature-icon {
+    color: #FF6B6B;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.05) translateY(-2px);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    opacity: 1;
+}
+
+/* Footer specific styles */
+.footer-bg {
+    background-color: #2C3E50;
+    transition: none;
+}
+
+.footer-bg:hover {
+    background-color: #2C3E50;
+} 

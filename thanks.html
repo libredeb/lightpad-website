@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Supporting LightPad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="assets/logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body class="bg-[#1E1E1E]">
+    <!-- Floating Navigation Bar -->
+    <nav class="fixed top-4 left-4 right-4 z-50 backdrop-blur-md bg-white/50 shadow-lg rounded-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <img src="assets/logo.svg" alt="LightPad Logo" class="h-12 w-auto mr-2">
+                    <span class="text-black font-bold text-2xl">LightPad</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-black hover:text-[#1E90FF] transition-colors flex items-center space-x-2">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back to Main Page</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Thank You Section -->
+    <section class="relative pt-40 pb-20 px-4 min-h-screen flex items-center">
+        <div class="hero-background">
+            <div class="app-icons">
+                <!-- App Icons will be added here -->
+            </div>
+        </div>
+        <div class="container mx-auto text-center relative z-10">
+            <div class="max-w-2xl mx-auto bg-[#2A2A2A]/80 backdrop-blur-sm p-12 rounded-2xl shadow-2xl border border-[#1E90FF]/20">
+                <div class="flex justify-center mb-8">
+                    <div class="relative">
+                        <i class="fas fa-heart text-[#1E90FF] text-6xl animate-pulse"></i>
+                        <i class="fas fa-star text-yellow-400 text-3xl absolute -top-2 -right-2 animate-spin" style="animation-duration: 3s;"></i>
+                    </div>
+                </div>
+                <h1 class="text-5xl font-bold text-white mb-6">Welcome to the LightPad Community!</h1>
+                <p class="text-xl text-white/90 mb-6">Your contribution places you among the distinguished supporters of open-source innovation. Together, we're shaping the future of Linux application launchers.</p>
+                <p class="text-lg text-white/80 mb-8">As a valued contributor, you're now part of an exclusive group of visionaries who believe in the power of lightweight, efficient software.</p>
+                
+                <div class="mb-8">
+                    <p class="text-white/80 mb-4">Share your achievement with the world:</p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <a href="https://twitter.com/intent/tweet?text=I'm proud to support LightPad, a cutting-edge Linux application launcher! Join me in advancing open-source innovation. #Linux #OpenSource #LightPad" target="_blank" class="bg-[#1DA1F2] hover:bg-[#1A8CD8] text-white px-4 py-3 rounded-lg transition-colors flex items-center justify-center space-x-2">
+                            <i class="fab fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://lightpad.org" target="_blank" class="bg-[#4267B2] hover:bg-[#365899] text-white px-4 py-3 rounded-lg transition-colors flex items-center justify-center space-x-2">
+                            <i class="fab fa-facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://lightpad.org" target="_blank" class="bg-[#0077B5] hover:bg-[#006699] text-white px-4 py-3 rounded-lg transition-colors flex items-center justify-center space-x-2">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://slack.com/share?url=https://lightpad.org&text=I'm supporting LightPad, a revolutionary Linux application launcher!" target="_blank" class="bg-[#4A154B] hover:bg-[#3A0F3A] text-white px-4 py-3 rounded-lg transition-colors flex items-center justify-center space-x-2">
+                            <i class="fab fa-slack"></i>
+                            <span>Slack</span>
+                        </a>
+                        <a href="https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=0&scope=bot" target="_blank" class="bg-[#7289DA] hover:bg-[#5B73C7] text-white px-4 py-3 rounded-lg transition-colors flex items-center justify-center space-x-2">
+                            <i class="fab fa-discord"></i>
+                            <span>Discord</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <a href="index.html" class="bg-[#1E90FF] hover:bg-[#1B7FD9] text-white px-8 py-4 rounded-lg transition-all duration-300 font-semibold flex items-center justify-center space-x-2 hover:shadow-lg hover:-translate-y-1">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Return to Home Page</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-bg text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-[#B2BEC3]">&copy; 2025 LightPad. All rights reserved.</p>
+            <p class="text-[#B2BEC3] mt-2">Licensed under GPL-3.0 | Made with <i class="fas fa-heart text-[#FF6B6B]"></i> for the Linux community</p>
+            <p class="text-[#B2BEC3] mt-2 text-sm">LightPad is not affiliated with or endorsed by any Linux distribution. All trademarks are the property of their respective owners.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Trigger confetti effect
+        function triggerConfetti() {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+
+        // Trigger confetti on page load
+        window.addEventListener('load', triggerConfetti);
+
+        // Add click event to trigger confetti
+        document.querySelector('.fa-heart').addEventListener('click', triggerConfetti);
+    </script>
+</body>
+</html> 
