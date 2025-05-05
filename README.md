@@ -30,6 +30,19 @@ The website is designed to be deployed on SourceForge.net. To deploy:
 
 1. Create a new project on SourceForge.net
 2. Upload all files to the project's web space
+  - Login to SourceForge.net using SFTP:
+    ```sh
+    sftp libredeb@web.sourceforge.net
+    ```
+  - Move to the `htdocs` folder:
+    ```sh
+    cd /home/project-web/lightpad/htdocs
+    ```
+  - Upload all files recursively:
+    ```sh
+    put -r .
+    ```
+
 3. Ensure the file structure is maintained
 4. Test the website after deployment
 
