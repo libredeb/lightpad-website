@@ -52,7 +52,7 @@ nav a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, #6B8CFF 0%, #34495E 100%);
+    background: linear-gradient(135deg, #4b5f83 0%, #121c26 100%);
     z-index: -1;
     overflow: hidden;
 }
